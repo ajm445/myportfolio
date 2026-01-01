@@ -172,12 +172,12 @@ const Skills = () => {
                 </p>
               </div>
               <div>
-                <div className="text-4xl mb-2">🤖</div>
+                <div className="text-4xl mb-2">🤝</div>
                 <h4 className="font-semibold text-apple-dark dark:text-white mb-1">
-                  AI 통합 개발
+                  팀 협업
                 </h4>
                 <p className="text-sm text-apple-gray-600 dark:text-apple-gray-300">
-                  OpenAI API, Anthropic API를 활용한 실용적 AI 서비스 구현
+                  원활한 커뮤니케이션과 협업으로 팀 프로젝트 성공 경험
                 </p>
               </div>
               <div>
