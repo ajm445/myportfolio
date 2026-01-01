@@ -90,9 +90,9 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 1.0 }}
             className="text-lg md:text-xl text-apple-gray-600 dark:text-apple-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed"
           >
-            AI를 다양한 도메인에 적용해 실제 서비스로 구현하고, <br></br>
-            웹 풀스택 개발 역량을 바탕으로 사용자 중심의 <br></br>
-            혁신적인 디지털 솔루션을 만들어가는 개발자입니다.
+            다양한 도메인에서 팀과 협업하며, <br></br>
+            웹 풀스택 역량을 기반으로 사용자 중심의 <br></br>
+            서비스를 만들어가는 개발자입니다.
           </motion.p>
 
           {/* 액션 버튼들 */}
