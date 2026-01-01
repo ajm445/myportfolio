@@ -621,6 +621,10 @@ const Projects = () => {
         {
           title: '일본 초기비용 계산기 특화',
           description: '도쿄/오사카 지역별 차등 비용, 16개 카테고리 한일 병기 초기비용 계산 시스템'
+        },
+        {
+          title: 'Google Analytics 4 사용자 분석',
+          description: 'GA4로 사용자 흐름 및 이벤트 추적을 구현하여 서비스 개선에 활용'
         }
       ],
       troubleshooting: [
