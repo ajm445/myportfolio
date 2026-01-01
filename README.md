@@ -1,9 +1,9 @@
-# 지민이의 보물창고 - 포트폴리오
+# 안지민 포트폴리오
 
 React + TypeScript + Vite로 제작된 개인 포트폴리오 웹사이트입니다.
 
 ## 🚀 배포 주소
-- **프로덕션**: [Netlify 배포 주소]
+- **프로덕션**: 배포 예정
 
 ## 🛠️ 기술 스택
 - React 19
@@ -11,7 +11,7 @@ React + TypeScript + Vite로 제작된 개인 포트폴리오 웹사이트입니
 - Vite
 - Tailwind CSS
 - Framer Motion
-- Google Analytics 4 (방문자 분석)
+- GSAP
 
 ## 📦 설치 및 실행
 
@@ -24,35 +24,36 @@ npm run dev
 
 # 프로덕션 빌드
 npm run build
+
+# 빌드 미리보기
+npm run preview
 ```
 
-## 📊 Google Analytics 4 설정
+## 📁 프로젝트 구조
 
-이 포트폴리오는 방문자 분석을 위해 Google Analytics 4를 사용합니다.
+```
+src/
+├── components/        # 페이지 섹션 컴포넌트
+│   ├── Header.tsx    # 네비게이션과 다크모드 토글
+│   ├── Hero.tsx      # 메인 히어로 섹션
+│   ├── About.tsx     # 소개 섹션
+│   ├── Skills.tsx    # 기술 스택 섹션
+│   ├── Projects.tsx  # 프로젝트 쇼케이스
+│   ├── Contact.tsx   # 연락처 정보
+│   └── Footer.tsx    # 푸터
+├── hooks/
+│   └── useScrollProgress.ts  # 스크롤 진행률 훅
+└── App.tsx           # 메인 앱 컴포넌트
+```
 
-### 환경 변수 설정
+## 🎨 주요 프로젝트
 
-1. `.env` 파일 생성 (로컬 개발용)
-   ```env
-   VITE_GA4_MEASUREMENT_ID=G-XXXXXXXXXX
-   ```
+- **Sensor Game Hub** - 센서 기반 게임 플랫폼
+- **Convi** - 편의점 종합 솔루션
+- **VerseUp** - 메타버스 학습 플랫폼
+- **워킹홀리데이 가계부** - 재정 관리 웹앱
+- **Budget Tracker** - React Native 가계부 앱
 
-2. Netlify 환경 변수 설정 (배포용)
-   - Site settings → Environment variables
-   - Key: `VITE_GA4_MEASUREMENT_ID`
-   - Value: `G-XXXXXXXXXX` (본인의 측정 ID)
+## 🎯 소개
 
-**상세한 설정 방법은 [GA4_SETUP.md](./GA4_SETUP.md) 참조**
-
-### 수집되는 데이터
-
-- ✅ 방문자 수 및 페이지뷰
-- ✅ 체류 시간 및 이탈률
-- ✅ 지역/디바이스 정보
-- ✅ 프로젝트 클릭 이벤트
-- ✅ 연락처 클릭 이벤트
-- ✅ UI 상호작용 (다크모드, 네비게이션)
-
-## 🎨 프로젝트 소개
-AI와 웹 풀스택 개발에 열정을 가진 개발자 안지민의 포트폴리오입니다.
-
+웹 풀스택 개발자 안지민의 포트폴리오입니다. React, TypeScript, AI 기술을 활용한 다양한 프로젝트들을 소개합니다.
