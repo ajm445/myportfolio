@@ -644,7 +644,7 @@ const Projects = () => {
         codeLines: '12,000+',
         testCoverage: '80%'
       },
-      deployUrl: 'working.jimin.it.kr',
+      deployUrl: 'https://working.jimin.it.kr',
       status: 'LIVE',
       color: 'from-green-500 to-teal-600',
       icon: <Wallet className="w-8 h-8" />,
