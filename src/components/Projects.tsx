@@ -63,7 +63,6 @@ interface Project {
     performance?: string
   }
   deployUrl: string
-  githubUrl: string
   docsUrl?: string
   status: ProjectStatus
   color: string
@@ -451,7 +450,6 @@ const Projects = () => {
         performance: '1,000+'
       },
       deployUrl: 'https://aihub.minhyuk.kr',
-      githubUrl: 'https://github.com/cmhblue1225/sensorchatbot',
       status: 'LIVE',
       color: 'from-orange-500 to-red-500',
       icon: <Smartphone className="w-8 h-8" />,
@@ -522,7 +520,6 @@ const Projects = () => {
         buildTime: '2.3min'
       },
       deployUrl: 'https://convi.minhyuk.kr',
-      githubUrl: 'https://github.com/cmhblue1225/convi',
       docsUrl: 'https://convi-final.onrender.com/wireframes/docs/index.html',
       status: 'LIVE',
       color: 'from-blue-500 to-indigo-600',
@@ -586,7 +583,6 @@ const Projects = () => {
         performance: '50+ 동시접속'
       },
       deployUrl: 'https://verseup.onrender.com/',
-      githubUrl: 'https://github.com/cmhblue1225/verseup',
       status: 'BETA',
       color: 'from-purple-500 to-indigo-600',
       icon: <Globe className="w-8 h-8" />,
@@ -648,8 +644,7 @@ const Projects = () => {
         codeLines: '12,000+',
         testCoverage: '80%'
       },
-      deployUrl: 'https://working-0ok6.onrender.com/',
-      githubUrl: 'https://github.com/cmhblue1225/working-holiday-budget',
+      deployUrl: 'working.jimin.it.kr',
       status: 'LIVE',
       color: 'from-green-500 to-teal-600',
       icon: <Wallet className="w-8 h-8" />,
@@ -707,7 +702,6 @@ const Projects = () => {
         testCoverage: '75%'
       },
       deployUrl: 'https://budget.minhyuk.kr',
-      githubUrl: 'https://github.com/cmhblue1225/budget-tracker',
       status: 'DEVELOPMENT',
       color: 'from-cyan-500 to-blue-600',
       icon: <BarChart3 className="w-8 h-8" />,
@@ -766,7 +760,6 @@ const Projects = () => {
         performance: 'RAG 검색'
       },
       deployUrl: 'https://msa-9gmc.onrender.com',
-      githubUrl: 'https://github.com/cmhblue1225/msa-analyzer',
       status: 'BETA',
       color: 'from-violet-500 to-purple-600',
       icon: <Layers className="w-8 h-8" />,
