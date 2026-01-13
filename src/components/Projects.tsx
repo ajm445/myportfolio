@@ -541,7 +541,7 @@ const Projects = () => {
       description: '학생, 강사, 학부모가 함께 참여하는 3D 메타버스 학습 플랫폼입니다. 웹 브라우저에서 바로 접속하여 3D 가상 교실에서 실시간 강의를 수강하고, 과제를 제출하며, 다른 학습자들과 소통할 수 있습니다.',
       image: '/api/placeholder/800/500',
       category: '교육 플랫폼, 메타버스',
-      period: '2025.11 - 2025.12',
+      period: '2025.12 - 2026.01',
       team: '팀 프로젝트 (포지션 : 백엔드)',
       technologies: ['React 19', 'Three.js', 'React Three Fiber', 'Rapier', 'Socket.IO', 'WebRTC', 'Node.js', 'Express', 'Supabase', '토스페이먼츠', 'Zustand', 'TanStack Query'],
       features: [
