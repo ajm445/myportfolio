@@ -712,6 +712,65 @@ const Projects = () => {
       color: 'from-cyan-500 to-blue-600',
       icon: <BarChart3 className="w-8 h-8" />,
       featured: false
+    },
+    {
+      id: 6,
+      title: 'MSA Analyzer',
+      subtitle: 'MSA 아키텍처 분리 AI 분석 서비스',
+      description: '사용자가 제공한 코드베이스 또는 프로젝트 설명을 Claude AI가 분석하여 최적의 MSA(Microservice Architecture) 서비스 분리 방안을 제안하는 웹 서비스입니다. RAG 파이프라인을 통해 MSA 가이드 문서를 검색하여 분석 품질을 향상시킵니다.',
+      image: '/api/placeholder/800/500',
+      category: 'AI, DevOps',
+      period: '2025.12 - 진행중',
+      team: '개인 프로젝트',
+      technologies: ['React 19', 'Vite 7', 'Tailwind CSS 4', 'shadcn/ui', 'React Flow', 'Node.js 20', 'Express.js 4', 'Supabase', 'pgvector', 'Claude API', 'Voyage AI'],
+      features: [
+        'Claude Sonnet 4 모델을 활용한 지능형 MSA 설계 분석',
+        'Voyage AI 임베딩 + pgvector 기반 RAG 파이프라인',
+        'ZIP 파일 업로드 또는 텍스트 설명으로 분석 요청 가능',
+        'React Flow 기반 MSA 구조 다이어그램 인터랙티브 시각화',
+        'JSON 형식 분석 결과 내보내기로 AI 프로젝트 생성 연동'
+      ],
+      achievements: [
+        {
+          title: 'RAG 파이프라인 구현',
+          description: 'Voyage AI voyage-3 모델과 pgvector를 활용한 MSA 가이드 문서 벡터 검색 시스템 구축'
+        },
+        {
+          title: 'Claude API 비용 관리 시스템',
+          description: '월간 한도 설정, 경고 임계값, 실시간 토큰 사용량 추적으로 API 비용 최적화'
+        },
+        {
+          title: '문서 임베딩 CLI 도구 개발',
+          description: 'Markdown 청킹 전략(H2/H3 기반 분할, 자동 태그 추출)을 적용한 문서 임베딩 자동화 스크립트'
+        }
+      ],
+      troubleshooting: [
+        {
+          problem: 'Voyage AI 무료 플랜 Rate Limit(3 RPM) 제한',
+          solution: '배치 처리(10개 청크씩)와 배치 간 21초 대기 시간 적용으로 Rate Limit 우회',
+          impact: '안정적인 대용량 문서 임베딩 처리 가능'
+        },
+        {
+          problem: 'Claude API 비용 급증 위험',
+          solution: '요청별 토큰 사용량 추적, 월간 한도 설정, 경고 임계값 도달 시 API 호출 자동 거부',
+          impact: '예산 내 안정적인 서비스 운영 보장'
+        },
+        {
+          problem: 'MSA 분석 결과의 일관성 부족',
+          solution: 'RAG 컨텍스트 추가로 MSA 가이드 문서 기반 분석 품질 향상, JSON 스키마 강제',
+          impact: '분석 결과 품질 및 일관성 대폭 개선'
+        }
+      ],
+      metrics: {
+        codeLines: '8,000+',
+        performance: 'RAG 검색'
+      },
+      deployUrl: 'https://msa-9gmc.onrender.com',
+      githubUrl: 'https://github.com/cmhblue1225/msa-analyzer',
+      status: 'BETA',
+      color: 'from-violet-500 to-purple-600',
+      icon: <Layers className="w-8 h-8" />,
+      featured: false
     }
   ]
 
