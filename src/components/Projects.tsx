@@ -701,7 +701,7 @@ const Projects = () => {
         codeLines: '15,000+',
         testCoverage: '75%'
       },
-      deployUrl: 'https://budget.minhyuk.kr',
+      deployUrl: '',
       status: 'DEVELOPMENT',
       color: 'from-cyan-500 to-blue-600',
       icon: <BarChart3 className="w-8 h-8" />,
