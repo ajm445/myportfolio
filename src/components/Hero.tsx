@@ -11,7 +11,7 @@ const Hero = () => {
   }
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-10">
       {/* 배경 그라데이션 */}
       <div className="absolute inset-0 bg-gradient-to-br from-apple-blue/10 via-purple-500/5 to-pink-500/10 dark:from-apple-blue/20 dark:via-purple-500/10 dark:to-pink-500/20" />
       
