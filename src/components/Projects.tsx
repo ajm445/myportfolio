@@ -449,7 +449,7 @@ const Projects = () => {
         codeLines: '15,000+',
         performance: '1,000+'
       },
-      deployUrl: 'https://aihub.minhyuk.kr',
+      deployUrl: 'https://sensor.leejaewon.kr/',
       status: 'LIVE',
       color: 'from-orange-500 to-red-500',
       icon: <Smartphone className="w-8 h-8" />,

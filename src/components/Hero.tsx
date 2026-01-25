@@ -51,7 +51,7 @@ const Hero = () => {
             <h1 className="text-responsive-lg font-bold text-apple-dark dark:text-white mb-4">
               안녕하세요! 
             </h1>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-apple-dark dark:text-white mb-6">
               <span className="text-gradient-apple">안지민</span>입니다
             </h2>
           </motion.div>
