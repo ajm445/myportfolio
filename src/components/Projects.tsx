@@ -22,7 +22,8 @@ import {
   Image as ImageIcon,
   Globe,
   Wallet,
-  BarChart3
+  BarChart3,
+  Swords
 } from 'lucide-react'
 import { trackProjectClick } from '../utils/analytics'
 
@@ -764,6 +765,69 @@ const Projects = () => {
       color: 'from-violet-500 to-purple-600',
       icon: <Layers className="w-8 h-8" />,
       featured: false
+    },
+    {
+      id: 7,
+      title: '막아라! 무너트려라! - 실시간 웹 게임',
+      subtitle: '서버 권위 아키텍처 기반 멀티플레이어 웹 게임',
+      description: 'RTS와 RPG 두 가지 게임 모드를 지원하는 풀스택 실시간 멀티플레이어 웹 게임입니다. 서버 권위(Server-Authoritative) 아키텍처 기반의 WebSocket 실시간 통신, Canvas 2D 렌더링, 적응형 보간 시스템 등을 직접 설계·구현했습니다.',
+      image: '/api/placeholder/800/500',
+      category: '웹 게임, 멀티플레이어',
+      period: '2026.01 - 2026.02',
+      team: '개인 프로젝트 (풀스택)',
+      technologies: ['React 19', 'TypeScript', 'Vite', 'Canvas 2D API', 'Zustand', 'Node.js', 'Express', 'WebSocket (ws)', 'Supabase', 'JWT', 'Tailwind CSS', 'Recharts'],
+      features: [
+        '서버 권위 모델 기반 60fps 실시간 멀티플레이어 (1~4인 Co-op, 1v1 PvP)',
+        '12개 클래스(4기본+8전직), 6단계 난이도, 보스 AI 등 심층 RPG 시스템',
+        '적응형 보간 시스템으로 네트워크 지연 환경에서도 부드러운 게임플레이',
+        '친구·DM·게임 초대 소셜 시스템 및 실시간 관리자 대시보드',
+        'viewport meta 기반 모바일 크로스 플랫폼 대응 (가상 조이스틱, 터치 스킬)'
+      ],
+      achievements: [
+        {
+          title: '서버 권위 실시간 멀티플레이어 구현',
+          description: '서버가 유일한 게임 상태 소유자인 Server-Authoritative 아키텍처로 치트 방지와 4인 동시 플레이 상태 일관성 보장'
+        },
+        {
+          title: '적응형 보간 시스템 직접 설계',
+          description: 'EMA 기반 서버 업데이트 간격 측정, 상태별 최적 보간 전략(이동/정지/스킬/스턴), easeOutCubic 이징 적용'
+        },
+        {
+          title: '33일간 388커밋, 68,800줄 1인 풀스택 개발',
+          description: '프론트엔드·백엔드·게임 엔진·DB·배포까지 전 영역을 단독으로 설계 및 구현'
+        },
+        {
+          title: '서버 성능 최적화',
+          description: '스킬 참조 캐싱, 거리 계산 최적화(Math.sqrt 제거), 브로드캐스트 최적화 등으로 4인 멀티플레이 60fps 유지'
+        }
+      ],
+      troubleshooting: [
+        {
+          problem: '4인 멀티플레이 환경에서 모든 클라이언트의 게임 상태 일관성 유지 어려움',
+          solution: '서버 권위 모델 채택 — 서버가 60fps로 게임 로직 실행, 33ms 간격 전체 상태 브로드캐스트, 입력 큐 시스템으로 입력 손실 방지',
+          impact: '4인 동시 플레이에서 완벽한 상태 동기화 달성, 치트 원천 차단'
+        },
+        {
+          problem: '30Hz 상태 업데이트로 캐릭터 움직임이 끊겨 보이는 현상',
+          solution: '적응형 보간 시스템 직접 설계 — EMA 기반 서버 간격 측정, 로컬 예측 + 양방향 위치 보정, 상태별 최적 보간 전략 적용',
+          impact: '네트워크 지연 환경에서도 부드러운 60fps 게임플레이 제공'
+        },
+        {
+          problem: '4인 멀티플레이에서 60fps 틱 레이트 유지 시 서버 성능 부족',
+          solution: '스킬 참조 캐싱, Date.now() 틱당 1회 호출, distanceSquared()로 Math.sqrt 제거, JSON.stringify 1회 브로드캐스트',
+          impact: '4인 기준 안정적 60fps 게임 루프 유지'
+        }
+      ],
+      metrics: {
+        codeLines: '68,800',
+        performance: '60fps 서버',
+        users: '4인 Co-op'
+      },
+      deployUrl: 'https://makmu.kr',
+      status: 'LIVE',
+      color: 'from-red-500 to-orange-600',
+      icon: <Swords className="w-8 h-8" />,
+      featured: true
     }
   ]
 

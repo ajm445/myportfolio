@@ -148,7 +148,7 @@ Vite 설정에서 성능 최적화를 위한 청크 분할이 구성되어 있�
 
 ## 📋 현재 프로젝트 현황
 
-### 등록된 프로젝트 (5개)
+### 등록된 프로젝트 (7개)
 
 #### 주요 프로젝트 (featured: true)
 1. **Sensor Game Hub** - 센서 기반 게임 플랫폼
@@ -163,9 +163,16 @@ Vite 설정에서 성능 최적화를 위한 청크 분할이 구성되어 있�
 4. **워킹홀리데이 가계부** - 워킹홀리데이 재정 관리 웹앱
    - 기술: React 19, TypeScript, Vite, Supabase, Tailwind CSS, Recharts, Google OAuth, ExchangeRate API, Vitest, Playwright
 
+5. **막아라! 무너트려라!** - 실시간 멀티플레이어 웹 게임 (RTS + RPG)
+   - 기술: React 19, TypeScript, Vite, Canvas 2D API, Zustand, Node.js, Express, WebSocket (ws), Supabase, JWT, Tailwind CSS, Recharts
+   - 배포: https://makmu.kr
+
 #### 기타 프로젝트 (featured: false)
-5. **Budget Tracker** - 가계부 앱 (워킹홀리데이 가계부에서 파생)
+6. **Budget Tracker** - 가계부 앱 (워킹홀리데이 가계부에서 파생)
    - 기술: React Native, Expo, TypeScript, Supabase, Zustand, TanStack Query, expo-router
+
+7. **MSA Analyzer** - MSA 아키텍처 분리 AI 분석 서비스
+   - 기술: React 19, Vite 7, Tailwind CSS 4, shadcn/ui, React Flow, Node.js 20, Express.js 4, Supabase, pgvector, Claude API, Voyage AI
 
 ### 스킬 카테고리 (4개)
 - **Frontend**: React, TypeScript, JavaScript, HTML/CSS, Tailwind CSS, Framer Motion
@@ -182,6 +189,7 @@ docs/
 ├── projects_sample.tsx          # 프로젝트 샘플 코드
 ├── projects/
 │   ├── budget-tracker.md        # Budget Tracker 프로젝트 문서
+│   ├── defence-game.md          # 막아라! 무너트려라! 프로젝트 문서
 │   ├── metavers_aducation.md    # VerseUp 프로젝트 문서
 │   └── working.md               # 워킹홀리데이 가계부 문서
 └── guides/
@@ -197,7 +205,7 @@ docs/
 
 ### 새로운 프로젝트 추가 시
 1. `src/components/Projects.tsx`의 `projects` 배열에 새 객체 추가
-2. 고유한 ID 부여 (현재 최대 ID: 5)
+2. 고유한 ID 부여 (현재 최대 ID: 7)
 3. 필수 필드: `id`, `title`, `subtitle`, `description`, `image`, `technologies`, `features`, `achievements`, `github`, `demo`, `featured`
 4. `featured: true`는 주요 프로젝트, `featured: false`는 기타 프로젝트
 5. 이미지는 `/public/` 폴더에 저장 후 경로 참조
