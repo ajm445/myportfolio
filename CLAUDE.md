@@ -175,10 +175,10 @@ Vite 설정에서 성능 최적화를 위한 청크 분할이 구성되어 있�
    - 기술: React 19, Vite 7, Tailwind CSS 4, shadcn/ui, React Flow, Node.js 20, Express.js 4, Supabase, pgvector, Claude API, Voyage AI
 
 ### 스킬 카테고리 (4개)
-- **Frontend**: React, TypeScript, JavaScript, HTML/CSS, Tailwind CSS, Framer Motion
-- **Backend**: Node.js, Express.js, Supabase, PostgreSQL, Socket.IO, RESTful API
+- **Frontend**: React, TypeScript, JavaScript, HTML/CSS, Tailwind CSS, Zustand, Framer Motion
+- **Backend**: Node.js, Express.js, Supabase, PostgreSQL, Socket.IO, WebSocket, JWT, RESTful API
 - **AI & Tools**: OpenAI API, Anthropic API, Git, Vite, Recharts, Device APIs
-- **Advanced**: Three.js, React Native, Expo, WebRTC, Turborepo, pgvector
+- **Advanced**: Canvas 2D API, Three.js, React Native, Expo, WebRTC, Turborepo, pgvector
 
 ---
 

@@ -14,6 +14,7 @@ const Skills = () => {
         { name: 'JavaScript', icon: '🟨' },
         { name: 'HTML/CSS', icon: '🎨' },
         { name: 'Tailwind CSS', icon: '🎯' },
+        { name: 'Zustand', icon: '🐻' },
         { name: 'Framer Motion', icon: '🎬' }
       ]
     },
@@ -26,6 +27,8 @@ const Skills = () => {
         { name: 'Supabase', icon: '🗃️' },
         { name: 'PostgreSQL', icon: '🐘' },
         { name: 'Socket.IO', icon: '🔌' },
+        { name: 'WebSocket', icon: '📡' },
+        { name: 'JWT', icon: '🔑' },
         { name: 'RESTful API', icon: '🌐' }
       ]
     },
@@ -45,6 +48,7 @@ const Skills = () => {
       title: 'Advanced',
       icon: '🚀',
       skills: [
+        { name: 'Canvas 2D API', icon: '🖼️' },
         { name: 'Three.js', icon: '🎮' },
         { name: 'React Native', icon: '📱' },
         { name: 'Expo', icon: '📲' },
