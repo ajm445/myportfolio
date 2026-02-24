@@ -151,3 +151,102 @@ body {
     line-height: 1.1;
   }
 }
+
+/* ========== 인쇄용 스타일 ========== */
+@media print {
+  /* 페이지 설정 */
+  @page {
+    size: A4;
+    margin: 15mm 12mm;
+  }
+
+  /* 라이트 모드 강제 */
+  html, body {
+    background: #fff !important;
+    color: #1d1d1f !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* 숨길 요소: 고정 헤더, 스크롤 진행바, PDF 버튼, 모달, 플로팅 장식, bounce 화살표 */
+  header,
+  [data-print-hide],
+  .fixed,
+  [role="dialog"],
+  .animate-bounce {
+    display: none !important;
+  }
+
+  /* 애니메이션/트랜지션 전부 비활성화 */
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Framer Motion inline transform/opacity 강제 해제 */
+  [style*="transform"],
+  [style*="opacity"] {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  /* 텍스트 그라데이션 폴백 */
+  .text-gradient {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: #667eea !important;
+    color: #667eea !important;
+  }
+
+  .text-gradient-apple {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: #007aff !important;
+    color: #007aff !important;
+  }
+
+  /* 페이지 나눔: 주요 섹션 앞에서 */
+  #about,
+  #projects,
+  #skills,
+  #contact {
+    page-break-before: always;
+  }
+
+  /* 카드 분리 방지 */
+  .card-hover,
+  [class*="rounded-2xl"],
+  [class*="rounded-xl"] {
+    break-inside: avoid;
+  }
+
+  /* Hero 섹션: 전체 화면 높이 해제 */
+  #hero {
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  /* 글래스 이펙트 해제 */
+  .glass-effect {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background-color: transparent !important;
+    border: none !important;
+  }
+
+  /* 다크모드 배경색 오버라이드 */
+  .dark .bg-apple-dark,
+  .bg-apple-dark {
+    background-color: #fff !important;
+  }
+
+  /* 링크에 URL 표시 */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    color: #6e6e73;
+    word-break: break-all;
+  }
+}

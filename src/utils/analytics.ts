@@ -115,3 +115,10 @@ export const trackNavigation = (section: string) => {
 export const trackExternalLink = (url: string, label?: string) => {
   trackEvent('External Link', 'click', label || url)
 }
+
+/**
+ * PDF 다운로드(인쇄) 이벤트 추적
+ */
+export const trackPdfDownload = () => {
+  trackEvent('UI', 'pdf_download', 'print')
+}

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import { Sun, Moon, Menu, X } from 'lucide-react'
+import { Sun, Moon, Menu, X, Download } from 'lucide-react'
 import { useState } from 'react'
-import { trackDarkModeToggle, trackNavigation } from '../utils/analytics'
+import { trackDarkModeToggle, trackNavigation, trackPdfDownload } from '../utils/analytics'
 
 interface HeaderProps {
   darkMode: boolean
@@ -33,6 +33,11 @@ const Header = ({ darkMode, toggleDarkMode }: HeaderProps) => {
     toggleDarkMode()
     // 다크모드 토글 이벤트 추적
     trackDarkModeToggle(!darkMode)
+  }
+
+  const handlePrint = () => {
+    trackPdfDownload()
+    window.print()
   }
 
   return (
@@ -75,6 +80,18 @@ const Header = ({ darkMode, toggleDarkMode }: HeaderProps) => {
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
             </motion.button>
+
+            {/* PDF 다운로드 */}
+            <motion.button
+              onClick={handlePrint}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              data-print-hide="true"
+              className="p-2 rounded-full bg-apple-gray-100 dark:bg-apple-gray-700 text-apple-gray-600 dark:text-apple-gray-300 hover:text-apple-blue dark:hover:text-apple-blue transition-all duration-200"
+              aria-label="PDF로 저장"
+            >
+              <Download size={20} />
+            </motion.button>
           </div>
 
           {/* 모바일 메뉴 버튼 */}
@@ -86,6 +103,17 @@ const Header = ({ darkMode, toggleDarkMode }: HeaderProps) => {
               className="p-2 rounded-full bg-apple-gray-100 dark:bg-apple-gray-700 text-apple-gray-600 dark:text-apple-gray-300"
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+            </motion.button>
+
+            <motion.button
+              onClick={handlePrint}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              data-print-hide="true"
+              className="p-2 rounded-full bg-apple-gray-100 dark:bg-apple-gray-700 text-apple-gray-600 dark:text-apple-gray-300"
+              aria-label="PDF로 저장"
+            >
+              <Download size={20} />
             </motion.button>
 
             <motion.button

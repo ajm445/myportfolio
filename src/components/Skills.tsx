@@ -83,13 +83,13 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        {/* 카테고리 탭 */}
+        {/* 카테고리 탭 (인쇄 시 숨김) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex justify-center mb-12"
+          className="flex justify-center mb-12 print:hidden"
         >
           <div className="flex bg-white dark:bg-apple-gray-800 rounded-2xl p-2 shadow-lg">
             {categories.map((category) => (
@@ -111,13 +111,13 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        {/* 스킬 리스트 */}
+        {/* 스킬 리스트 — 인터랙티브 탭 (인쇄 시 숨김) */}
         <motion.div
           key={activeCategory}
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-6xl mx-auto"
+          className="max-w-6xl mx-auto print:hidden"
         >
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {skillCategories[activeCategory as SkillCategory].skills.map((skill: Skill, index: number) => (
@@ -152,6 +152,28 @@ const Skills = () => {
             ))}
           </div>
         </motion.div>
+
+        {/* 스킬 리스트 — 인쇄 전용 (전체 카테고리 표시) */}
+        <div className="hidden print:block max-w-6xl mx-auto">
+          {categories.map((category) => (
+            <div key={category} className="mb-8">
+              <h3 className="text-xl font-bold text-apple-dark mb-4">
+                {skillCategories[category].icon} {skillCategories[category].title}
+              </h3>
+              <div className="grid grid-cols-4 gap-3">
+                {skillCategories[category].skills.map((skill: Skill) => (
+                  <div
+                    key={skill.name}
+                    className="border border-apple-gray-200 rounded-xl p-3 text-center"
+                  >
+                    <div className="text-xl mb-1">{skill.icon}</div>
+                    <div className="text-sm font-semibold text-apple-dark">{skill.name}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
 
         {/* 하단 특화 기술 소개 */}
         <motion.div
