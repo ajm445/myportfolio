@@ -319,7 +319,7 @@ const VideoPlayer = ({ videos }: { videos: string[] }) => {
   )
 }
 
-const shouldShowLiveDemo = (deployUrl: string): boolean => deployUrl !== '#'
+const shouldShowLiveDemo = (project: Project): boolean => project.deployUrl !== '#' && project.deployUrl !== '' && project.status !== 'DEVELOPMENT'
 
 const ProjectActions = ({
   project,
@@ -330,7 +330,7 @@ const ProjectActions = ({
   onViewDetails: () => void
   showViewDetails?: boolean
 }) => {
-  const hasLiveDemo = shouldShowLiveDemo(project.deployUrl)
+  const hasLiveDemo = shouldShowLiveDemo(project)
 
   if (!hasLiveDemo && !showViewDetails) {
     return (
@@ -658,7 +658,7 @@ const Projects = () => {
       description: '워킹홀리데이 가계부의 핵심 가계부 기능을 분리하여 웹과 모바일 앱으로 확장한 크로스플랫폼 프로젝트입니다. pnpm + Turborepo 모노레포 구조로 React 웹과 React Native 모바일 간 코드를 공유하며, 실시간 환율, 고정지출, 저축 목표, 통계 대시보드 기능을 제공합니다.',
       image: '/api/placeholder/800/500',
       category: '핀테크, 모바일',
-      period: '2025.10 - 2025.12',
+      period: '2025.10 - 2025.12(중단)',
       team: '개인 프로젝트',
       technologies: ['React 19', 'React Native', 'Expo SDK 54', 'TypeScript', 'Supabase', 'Tailwind CSS', 'NativeWind', 'Turborepo', 'pnpm', 'Recharts', 'Vitest', 'Playwright'],
       features: [
@@ -715,7 +715,7 @@ const Projects = () => {
       description: '사용자가 제공한 코드베이스 또는 프로젝트 설명을 Claude AI가 분석하여 최적의 MSA(Microservice Architecture) 서비스 분리 방안을 제안하는 웹 서비스입니다. RAG 파이프라인을 통해 MSA 가이드 문서를 검색하여 분석 품질을 향상시킵니다.',
       image: '/api/placeholder/800/500',
       category: 'AI, DevOps',
-      period: '2025.12 - 진행중',
+      period: '2025.12 - 2026.01(중단)',
       team: '개인 프로젝트',
       technologies: ['React 19', 'Vite 7', 'Tailwind CSS 4', 'shadcn/ui', 'React Flow', 'Node.js 20', 'Express.js 4', 'Supabase', 'pgvector', 'Claude API', 'Voyage AI'],
       features: [
@@ -761,7 +761,7 @@ const Projects = () => {
         performance: 'RAG 검색'
       },
       deployUrl: 'https://msa-9gmc.onrender.com',
-      status: 'BETA',
+      status: 'DEVELOPMENT',
       color: 'from-violet-500 to-purple-600',
       icon: <Layers className="w-8 h-8" />,
       featured: false
