@@ -158,17 +158,17 @@ const Skills = () => {
         <div className="hidden print:block max-w-6xl mx-auto">
           {categories.map((category) => (
             <div key={category} className="mb-8">
-              <h3 className="text-xl font-bold text-apple-dark mb-4">
+              <h3 className="text-xl font-bold text-apple-dark dark:text-white mb-4">
                 {skillCategories[category].icon} {skillCategories[category].title}
               </h3>
               <div className="grid grid-cols-4 gap-3">
                 {skillCategories[category].skills.map((skill: Skill) => (
                   <div
                     key={skill.name}
-                    className="border border-apple-gray-200 rounded-xl p-3 text-center"
+                    className="border border-apple-gray-200 dark:border-apple-gray-700 rounded-xl p-3 text-center"
                   >
                     <div className="text-xl mb-1">{skill.icon}</div>
-                    <div className="text-sm font-semibold text-apple-dark">{skill.name}</div>
+                    <div className="text-sm font-semibold text-apple-dark dark:text-white">{skill.name}</div>
                   </div>
                 ))}
               </div>
