@@ -54,7 +54,8 @@ const Skills = () => {
         { name: 'Expo', icon: '📲' },
         { name: 'WebRTC', icon: '📹' },
         { name: 'Turborepo', icon: '⚙️' },
-        { name: 'pgvector', icon: '🔍' }
+        { name: 'pgvector', icon: '🔍' },
+        { name: 'Electron', icon: '🖥️' }
       ]
     }
   }

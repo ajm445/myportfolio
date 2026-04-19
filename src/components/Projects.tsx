@@ -23,7 +23,8 @@ import {
   Globe,
   Wallet,
   BarChart3,
-  Swords
+  Swords,
+  Cat
 } from 'lucide-react'
 import { trackProjectClick } from '../utils/analytics'
 
@@ -828,6 +829,66 @@ const Projects = () => {
       color: 'from-red-500 to-orange-600',
       icon: <Swords className="w-8 h-8" />,
       featured: true
+    },
+    {
+      id: 8,
+      title: 'com-chr - 슬라임 데스크톱 펫',
+      subtitle: '작업표시줄 위에 사는 사이버틱 슬라임 반려동물',
+      description: '화면 하단을 돌아다니며 먹이를 주고 쓰다듬고 놀아줄 수 있는 다마고치 스타일의 데스크톱 반려 슬라임입니다. 무한 레벨 성장, 감정 표현, 대사 시스템, 멀티 모니터 지원을 갖춘 Electron 기반 Windows 데스크톱 앱입니다.',
+      image: '/api/placeholder/800/500',
+      category: '데스크톱 앱, 게임',
+      period: '2026.04 - 진행중',
+      team: '개인 프로젝트',
+      technologies: ['Electron 33', 'React 18', 'TypeScript', 'electron-vite', 'Tailwind CSS 4', 'Zustand', 'electron-store', 'Jest', 'GitHub Actions', 'pnpm'],
+      features: [
+        '메인 프로세스 기반 30fps 이동 엔진 및 11가지 이동 상태',
+        'Gemini로 생성한 스프라이트 시트 10종에 CSS steps() 기반 애니메이션 적용',
+        '다마고치 스타일 5개 코어 스탯 시스템 (허기/행복/청결/EXP/레벨)',
+        '200개 이상 조건부 대사 시스템 (듀얼 슬롯 버블, 레벨 게이팅)',
+        '멀티 모니터 자동 전환 및 작업표시줄 높이 동적 계산',
+        'localStorage + electron-store 이중 영속성 전략'
+      ],
+      achievements: [
+        {
+          title: 'Electron 프로세스 아키텍처 설계',
+          description: 'Main Process에 이동 엔진·윈도우 관리, Renderer에 UI·상태 로직을 분리하여 IPC 기반 통신 구조 설계. Renderer 내부는 컴포넌트(UI), 스토어(상태), 엔진(틱 로직)으로 역할별 디렉토리 구분'
+        },
+        {
+          title: 'GitHub Actions 기반 CI/CD 자동화',
+          description: 'Git 태그 푸시 시 자동 빌드 · NSIS 인스톨러 패키징 · GitHub Releases 발행까지 완전 자동화 파이프라인 구축'
+        },
+        {
+          title: '테스트 커버리지 85% 이상 목표 설정',
+          description: 'Jest + ts-jest 기반 테스트 스위트 1,483줄 작성, 대부분 항목에서 목표 달성'
+        }
+      ],
+      troubleshooting: [
+        {
+          problem: '투명 프레임리스 윈도우에서 슬라임 영역만 클릭을 받고, 투명 영역은 아래 창으로 관통되어야 하는 요구사항',
+          solution: 'win.setIgnoreMouseEvents(true/false)를 동적 전환하여 렌더러의 마우스 위치 기반 히트 영역 판별 결과를 IPC로 메인 프로세스에 전달',
+          impact: '투명 영역은 아래 창으로 자연스럽게 클릭이 통과하며 슬라임만 정상적으로 상호작용 가능'
+        },
+        {
+          problem: '멀티 모니터 환경에서 모니터마다 작업표시줄 높이·위치가 달라 슬라임 앵커 Y 좌표가 어긋나는 문제',
+          solution: 'getEffectiveAnchorY() 함수로 모니터별 안전 마진(6-48px)을 계산하고 디스플레이 변경 이벤트 구독으로 실시간 재계산',
+          impact: '모니터 추가/제거/DPI 변경 시에도 슬라임이 정확한 위치에 안착하도록 보장'
+        },
+        {
+          problem: '앱을 오래 꺼두면 재시작 시 오프라인 경과 시간만큼 스탯이 일괄 감소하여 허기/행복/청결이 바닥으로 떨어지는 문제',
+          solution: 'lastTickTime을 앱 시작 시점의 현재 시간으로 리셋하여 오프라인 경과 시간을 무시하는 정책 적용',
+          impact: '장기 미접속 이후에도 스탯이 보존되어 공정한 게임플레이 보장, 복귀 이탈 방지'
+        }
+      ],
+      metrics: {
+        codeLines: '3,984',
+        testCoverage: '85%+ 목표',
+        performance: '30fps 엔진'
+      },
+      deployUrl: 'https://github.com/ajm445/com-chr/releases',
+      status: 'LIVE',
+      color: 'from-pink-500 to-purple-600',
+      icon: <Cat className="w-8 h-8" />,
+      featured: false
     }
   ]
 
